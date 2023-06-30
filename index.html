@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-tac-toe</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/favicon2.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <img id="logo" src="images/tic_tac_toe_title-removebg-preview.png" alt="">
+    <div id="startingWindow">
+        <div id="tips">Tips
+            <ol>
+                <li>Choose board dimensions ( maximum  "boardDimensions": [7, 20] )</li>
+                <li>Choose how many zeros or crosses should be in a row to win in "winningSequenceLength" field</li>
+                <li>Write down the names of the first and second players in the "name" fields</li>
+                <li>Press start!</li>
+            </ol>
+        </div>
+        <div id="provideJson">Provide JSON configuration here</div>
+        <textarea name="config" id="json" cols="30" rows="15">
+{
+  "boardDimensions": [3, 3],
+  "winningSequenceLength": 3,
+  "players": [
+    {
+      "name": "Player 1",
+      "mark": "X"
+    },
+    {
+      "name": "Player 2",
+      "mark": "O"
+    }
+  ]
+}</textarea>
+        <button>Start</button>
+    </div>
+    <div id="board">
+        <div id="players">
+            <div id="versusField"></div>
+            <div id="playerTurn"></div>
+        </div>
+        <div id="field"></div>
+    </div>
+    <div id="endingWindow">
+        <div id="result"></div>
+        <img src="images/dancing-color-changing-banana-uqgjzgre642ls20t.gif" alt="">
+        <button id="restartG">Restart</button>
+        <button id="newG">New game</button>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
